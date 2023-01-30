@@ -16,6 +16,7 @@ import { DateUtils } from 'typeorm/util/DateUtils';
 
 import config from '@/config';
 import * as Db from '@/Db';
+import type { DatabaseType } from '@db/types';
 import * as ResponseHelper from '@/ResponseHelper';
 import * as ActiveExecutions from '@/ActiveExecutions';
 import type {

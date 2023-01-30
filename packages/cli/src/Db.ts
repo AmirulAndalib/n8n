@@ -13,10 +13,8 @@ import type {
 } from 'typeorm';
 import { DataSource as Connection } from 'typeorm';
 import type { TlsOptions } from 'tls';
-import type { DatabaseType, IDatabaseCollections } from '@/Interfaces';
-
+import type { IDatabaseCollections } from '@/Interfaces';
 import config from '@/config';
-
 import { entities } from '@db/entities';
 import {
 	getMariaDBConnectionOptions,
@@ -25,8 +23,8 @@ import {
 	getPostgresConnectionOptions,
 	getSqliteConnectionOptions,
 } from '@db/config';
-import type { MigrationClass } from '@db/types';
 import { wrapMigration } from '@db/utils/migrationHelpers';
+import type { DatabaseType, MigrationClass } from '@db/types';
 
 export let isInitialized = false;
 export const collections = {} as IDatabaseCollections;
