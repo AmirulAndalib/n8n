@@ -7,6 +7,7 @@
 					:label="$locale.baseText('settings.users.invite')"
 					@click="onInvite"
 					size="large"
+					data-test-id="invite-users-button"
 				/>
 			</div>
 		</div>
@@ -20,7 +21,7 @@
 				@click="redirectToSetup"
 			/>
 		</div>
-		<div :class="$style.usersContainer" v-else>
+		<div v-else :class="$style.usersContainer" data-test-id="user-list">
 			<n8n-users-list
 				:actions="usersListActions"
 				:users="usersStore.allUsers"

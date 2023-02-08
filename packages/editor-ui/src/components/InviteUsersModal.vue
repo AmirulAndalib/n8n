@@ -56,6 +56,7 @@
 				:label="buttonLabel"
 				@click="onSubmitClick"
 				float="right"
+				data-test-id="invite-user-button"
 			/>
 		</template>
 	</Modal>
